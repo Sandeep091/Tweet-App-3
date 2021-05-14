@@ -1,0 +1,29 @@
+<div class="container my-5 col-lg-7">
+    <div class="container-fluid" *ngFor="let detail of tweetList">
+        <div class="card m-3 px-0">
+            <div class="card-header">
+                <h5 class="d-flex">
+                    <span>{{detail?.userName}}</span>
+                    <span class="ml-auto" *ngIf="getUserName()==detail.userName"><a class="mx-3" href="javascript:void(0)" (click)="onUpdate(detail)">
+                            <i class=" material-icons text-dark">
+                                <h5><span class="material-icons-outlined ">create</span></h5>
+                            </i>
+                        </a><a href="javascript:void(0)" class="mx-3" (click)="onDelete(detail.id)">
+                            <i class=" material-icons text-dark">
+                                <h5><span class="material-icons-outlined">delete</span></h5>
+                            </i>
+                        </a>
+                    </span>
+                </h5>
+                <p class="ml-4 mb-0">{{detail?.tweet}}</p>
+                <p class="ml-4 mb-0">{{detail?.tags}}</p>
+            </div>
+            <div class="card-body my-auto">
+                <a href="javascript:void(0)" (click)="AddLike(detail.id)"><i class="material-icons text-dark"><span
+                            class="material-icons-outlined ">
+                            thumb_up_of_alt
+                        </span></i></a> <span class="pt-5 ml-2">{{detail?.likes}}</span>
+            </div>
+        </div>
+    </div>
+</div>
