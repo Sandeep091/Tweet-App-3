@@ -1,0 +1,64 @@
+version: "3.7"
+services:
+   tweet-service:
+    image: tweet-application-service
+    build: MidTier/tweetservice/.
+    ports:
+      - "8081:8081"
+    links:
+      - mongodb
+   mongodb:
+    image: mongo:4.1.2
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_DATABASE: tweetapp
+      MONGODB_DATA_DIR: /MongoDB/db
+   tweet-app-ui:
+    image: tweet-app-ui
+    build: FrontTier/angular-learning/.
+    ports:
+        - 4000:80
+    links:
+        - tweet-service
+   #elastic-search:
+#image: elasticsearch:7.9.2
+##- discovery.type=single-node
+#ports:
+#- "9200:9200"
+
+ #kibana:
+#image: kibana:7.9.2
+#ports:
+#- "5601:5601"
+#logstash:
+#image: logstash:7.9.2
+#ports:
+#- "5000:5000"
+#volumes:
+#- type: bind
+#source: ./logstash_pipeline/
+#target: /usr/share/logstash/pipeline
+#read_only: true
+
+#zookeeper:
+##container_name: zookeeper
+#ports:
+#- "2181:2181"
+
+ #kafka:
+#image: wurstmeister/kafka
+#container_name: kafka
+##- zookeeper:zk
+#ports:
+#- "9092:9092"
+#environment:
+#KAFKA_ADVERTISED_HOST_NAME: tweet-service:8021
+#KAFKA_ZOOKEEPER_CONNECT: zk:2181
+#KAFKA_MESSAGE_MAX_BYTES: 2000000
+#KAFKA_CREATE_TOPICS: "Notifications:1:1"
+#volumes:
+#- /var/run/docker.sock:/var/run/docker.sock
+#depends_on:
+#- zookeeper
