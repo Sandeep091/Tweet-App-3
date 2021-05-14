@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.color {
+    background-color: #666666;
+}
+
+/* .loading {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 50%;
+    background-color: #ffffff;
+    background-image: url('https://media.tenor.com/images/e549f9798674301c5af2c91581194091/tenor.gif');
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: 10000000;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+} */
