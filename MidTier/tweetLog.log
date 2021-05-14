@@ -1,0 +1,1186 @@
+2021-05-04 10:57:29.888  INFO 11752 --- [main] c.t.t.TweetserviceApplicationTests       : Starting TweetserviceApplicationTests using Java 1.8.0_201 on Lab-637520727382813401-1 with PID 11752 (started by User in C:\Tweet-App-2\MidTier\tweetservice)
+2021-05-04 10:57:29.933  INFO 11752 --- [main] c.t.t.TweetserviceApplicationTests       : No active profile set, falling back to default profiles: default
+2021-05-04 10:57:33.138  INFO 11752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-04 10:57:33.378  INFO 11752 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 229 ms. Found 2 MongoDB repository interfaces.
+2021-05-04 10:57:35.030  INFO 11752 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-04 10:57:35.458  INFO 11752 --- [cluster-rtt-ClusterId{value='6090db470c122f5ea0362aa2', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:19}] to localhost:27017
+2021-05-04 10:57:35.461  INFO 11752 --- [cluster-ClusterId{value='6090db470c122f5ea0362aa2', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:20}] to localhost:27017
+2021-05-04 10:57:35.463  INFO 11752 --- [cluster-ClusterId{value='6090db470c122f5ea0362aa2', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=222594900}
+2021-05-04 10:57:38.924  INFO 11752 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 99f6b91b-a07c-4460-8ef1-dd72b5adb8d9
+
+2021-05-04 10:57:39.447  INFO 11752 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-04 10:57:40.106  INFO 11752 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d237460, org.springframework.security.web.context.SecurityContextPersistenceFilter@26f0141, org.springframework.security.web.header.HeaderWriterFilter@3b0d3a63, org.springframework.web.filter.CorsFilter@48f2054d, org.springframework.security.web.authentication.logout.LogoutFilter@2dc39b53, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@3344d163, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6de7778f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@50ec4bfc, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4b3a01d8, org.springframework.security.web.session.SessionManagementFilter@5c8d58ed, org.springframework.security.web.access.ExceptionTranslationFilter@34a20f16, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@123307c4]
+2021-05-04 10:57:40.853  INFO 11752 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 10:57:41.714  INFO 11752 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-tweetkafka-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = tweetkafka
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2021-05-04 10:57:42.227  INFO 11752 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-05-04 10:57:42.230  INFO 11752 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-05-04 10:57:42.231  INFO 11752 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1620106062224
+2021-05-04 10:57:42.257  INFO 11752 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Subscribed to topic(s): TweetPosted
+2021-05-04 10:57:42.291  INFO 11752 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-05-04 10:57:42.350  INFO 11752 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-04 10:57:42.823  INFO 11752 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-04 10:57:42.924  INFO 11752 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-04 10:57:43.568  INFO 11752 --- [main] c.t.t.TweetserviceApplicationTests       : Started TweetserviceApplicationTests in 14.571 seconds (JVM running for 17.547)
+2021-05-04 10:57:44.666  INFO 11752 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Unsubscribed all topics or patterns and assigned partitions
+2021-05-04 10:57:44.667  INFO 11752 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2021-05-04 10:57:44.742  INFO 11752 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] essageListenerContainer$ListenerConsumer : tweetkafka: Consumer stopped
+2021-05-04 10:57:44.767  INFO 11752 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-04 10:58:59.730  INFO 4012 --- [main] c.t.t.TweetserviceApplication            : Starting TweetserviceApplication using Java 1.8.0_201 on Lab-637520727382813401-1 with PID 4012 (C:\Tweet-App-2\MidTier\tweetservice\target\classes started by User in C:\Tweet-App-2\MidTier\tweetservice)
+2021-05-04 10:58:59.751  INFO 4012 --- [main] c.t.t.TweetserviceApplication            : No active profile set, falling back to default profiles: default
+2021-05-04 10:59:02.175  INFO 4012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-04 10:59:02.298  INFO 4012 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 116 ms. Found 2 MongoDB repository interfaces.
+2021-05-04 10:59:03.627  INFO 4012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-05-04 10:59:03.647  INFO 4012 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-04 10:59:03.648  INFO 4012 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-04 10:59:03.823  INFO 4012 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-04 10:59:03.824  INFO 4012 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3560 ms
+2021-05-04 10:59:04.210  INFO 4012 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-04 10:59:04.446  INFO 4012 --- [cluster-rtt-ClusterId{value='6090dba0a0fae62dc3e3fe0d', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:22}] to localhost:27017
+2021-05-04 10:59:04.450  INFO 4012 --- [cluster-ClusterId{value='6090dba0a0fae62dc3e3fe0d', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:21}] to localhost:27017
+2021-05-04 10:59:04.451  INFO 4012 --- [cluster-ClusterId{value='6090dba0a0fae62dc3e3fe0d', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=111389900}
+2021-05-04 10:59:06.220  INFO 4012 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 56a22f85-f11c-4b06-bae6-01691cb9466a
+
+2021-05-04 10:59:06.429  INFO 4012 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-04 10:59:06.697  INFO 4012 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@739831a4, org.springframework.security.web.context.SecurityContextPersistenceFilter@43da0955, org.springframework.security.web.header.HeaderWriterFilter@59d0cdb6, org.springframework.web.filter.CorsFilter@7e3236d, org.springframework.security.web.authentication.logout.LogoutFilter@7c96c85, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2ee39e73, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6d963d70, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@65c17e38, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@38a4e2b0, org.springframework.security.web.session.SessionManagementFilter@113ee1ce, org.springframework.security.web.access.ExceptionTranslationFilter@6e243175, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@21a46ff1]
+2021-05-04 10:59:06.887  INFO 4012 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 10:59:07.370  INFO 4012 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = earliest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-tweetkafka-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = tweetkafka
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2021-05-04 10:59:07.687  INFO 4012 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-05-04 10:59:07.690  INFO 4012 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-05-04 10:59:07.691  INFO 4012 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1620106147683
+2021-05-04 10:59:07.696  INFO 4012 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Subscribed to topic(s): TweetPosted
+2021-05-04 10:59:07.706  INFO 4012 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-05-04 10:59:07.737  INFO 4012 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-05-04 10:59:07.739  INFO 4012 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-04 10:59:07.817  INFO 4012 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-04 10:59:07.940  INFO 4012 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-04 10:59:08.774  INFO 4012 --- [main] c.t.t.TweetserviceApplication            : Started TweetserviceApplication in 10.072 seconds (JVM running for 10.898)
+2021-05-04 10:59:11.162  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:11.163  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:13.261  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:13.262  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:15.367  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:15.368  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:17.581  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:17.582  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:20.102  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:20.103  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:22.884  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:22.885  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:25.862  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:25.863  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:29.028  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:29.029  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:32.243  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:32.244  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:35.364  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:35.365  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:38.386  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:38.386  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:41.455  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:41.456  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:44.319  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:44.320  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:47.262  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:47.264  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:50.198  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:50.199  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:53.067  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:53.067  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:55.941  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:55.942  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 10:59:58.858  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 10:59:58.859  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:01.815  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:01.816  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:05.031  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:05.032  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:07.941  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:07.942  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:11.061  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:11.061  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:14.072  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:14.074  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:17.137  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:17.138  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:20.295  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:20.296  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:23.488  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:23.489  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:26.653  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:26.654  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:29.765  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:29.767  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:32.757  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:32.758  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:35.820  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:35.821  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:39.010  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:39.011  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:41.927  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:41.928  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:45.022  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:45.023  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:48.242  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:48.243  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:00:51.219  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:00:51.220  WARN 4012 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:04:49.354  INFO 4960 --- [main] c.t.t.TweetserviceApplication            : Starting TweetserviceApplication using Java 1.8.0_201 on Lab-637520727382813401-1 with PID 4960 (C:\Tweet-App-2\MidTier\tweetservice\target\classes started by User in C:\Tweet-App-2\MidTier\tweetservice)
+2021-05-04 11:04:49.362  INFO 4960 --- [main] c.t.t.TweetserviceApplication            : No active profile set, falling back to default profiles: default
+2021-05-04 11:04:51.602  INFO 4960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-04 11:04:51.751  INFO 4960 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 142 ms. Found 2 MongoDB repository interfaces.
+2021-05-04 11:04:53.189  INFO 4960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-05-04 11:04:53.211  INFO 4960 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-04 11:04:53.212  INFO 4960 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-04 11:04:53.376  INFO 4960 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-04 11:04:53.377  INFO 4960 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3820 ms
+2021-05-04 11:04:53.738  INFO 4960 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-04 11:04:54.125  INFO 4960 --- [cluster-ClusterId{value='6090dcfd33b6181715b7e3c6', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:23}] to localhost:27017
+2021-05-04 11:04:54.126  INFO 4960 --- [cluster-ClusterId{value='6090dcfd33b6181715b7e3c6', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=106169100}
+2021-05-04 11:04:54.130  INFO 4960 --- [cluster-rtt-ClusterId{value='6090dcfd33b6181715b7e3c6', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:24}] to localhost:27017
+2021-05-04 11:04:55.923  INFO 4960 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 9706710d-0abf-482e-b238-e928b454d28f
+
+2021-05-04 11:04:56.123  INFO 4960 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-04 11:04:56.430  INFO 4960 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@707865bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b325930, org.springframework.security.web.header.HeaderWriterFilter@383cb5ce, org.springframework.web.filter.CorsFilter@31f77791, org.springframework.security.web.authentication.logout.LogoutFilter@4d0cc83e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a7cb3a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79ba0a6f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c33da7a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@552fee7a, org.springframework.security.web.session.SessionManagementFilter@5e002356, org.springframework.security.web.access.ExceptionTranslationFilter@230a73f2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4962b41e]
+2021-05-04 11:04:56.694  INFO 4960 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:04:57.265  INFO 4960 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-tweetkafka-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = tweetkafka
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2021-05-04 11:04:57.540  INFO 4960 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-05-04 11:04:57.543  INFO 4960 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-05-04 11:04:57.544  INFO 4960 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1620106497538
+2021-05-04 11:04:57.548  INFO 4960 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Subscribed to topic(s): TweetPosted
+2021-05-04 11:04:57.560  INFO 4960 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-05-04 11:04:57.640  INFO 4960 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-05-04 11:04:57.642  INFO 4960 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-04 11:04:57.818  INFO 4960 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-04 11:04:57.934  INFO 4960 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-04 11:04:58.654  INFO 4960 --- [main] c.t.t.TweetserviceApplication            : Started TweetserviceApplication in 10.473 seconds (JVM running for 11.52)
+2021-05-04 11:05:00.661  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:00.662  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:02.775  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:02.775  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:04.926  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:04.927  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:07.186  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:07.187  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:09.589  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:09.592  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:12.529  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:12.530  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:15.600  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:15.600  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:18.717  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:18.718  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:21.605  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:21.605  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:24.672  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:24.673  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:27.907  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:27.908  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:30.918  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:30.919  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:33.880  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:33.881  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:37.012  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:37.013  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:39.815  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:39.816  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:42.832  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:42.833  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:45.958  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:45.959  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:48.920  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:48.921  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:51.848  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:51.849  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:55.020  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:55.021  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:05:58.057  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:05:58.058  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:00.930  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:00.930  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:03.924  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:03.925  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:07.096  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:07.097  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:10.071  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:10.072  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:12.888  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:12.889  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:15.796  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:15.797  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:18.761  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:18.762  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:21.735  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:21.737  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:24.718  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:24.719  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:27.576  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:27.577  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:30.622  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:30.624  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:33.691  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:33.691  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:36.668  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:36.669  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:39.719  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:39.720  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:42.640  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:42.641  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:45.707  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:45.708  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:06:48.680  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:06:48.681  WARN 4960 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:07:54.543  INFO 12476 --- [main] c.t.t.TweetserviceApplicationTests       : Starting TweetserviceApplicationTests using Java 1.8.0_201 on Lab-637520727382813401-1 with PID 12476 (started by User in C:\Tweet-App-2\MidTier\tweetservice)
+2021-05-04 11:07:54.552  INFO 12476 --- [main] c.t.t.TweetserviceApplicationTests       : No active profile set, falling back to default profiles: default
+2021-05-04 11:07:56.715  INFO 12476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-04 11:07:56.907  INFO 12476 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 183 ms. Found 2 MongoDB repository interfaces.
+2021-05-04 11:07:58.433  INFO 12476 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-04 11:07:58.868  INFO 12476 --- [cluster-rtt-ClusterId{value='6090ddb62152e02cf58a8985', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:25}] to localhost:27017
+2021-05-04 11:07:58.893  INFO 12476 --- [cluster-ClusterId{value='6090ddb62152e02cf58a8985', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:26}] to localhost:27017
+2021-05-04 11:07:58.900  INFO 12476 --- [cluster-ClusterId{value='6090ddb62152e02cf58a8985', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=73422200}
+2021-05-04 11:08:01.910  INFO 12476 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 48d4816f-8707-41a7-8123-d34c72a613a2
+
+2021-05-04 11:08:02.392  INFO 12476 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-04 11:08:02.986  INFO 12476 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@656c5c3, org.springframework.security.web.context.SecurityContextPersistenceFilter@6b2fdffc, org.springframework.security.web.header.HeaderWriterFilter@3d104c9b, org.springframework.web.filter.CorsFilter@7911cc15, org.springframework.security.web.authentication.logout.LogoutFilter@382d71c7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@712e787e, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5d194314, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4dc52559, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4409cae6, org.springframework.security.web.session.SessionManagementFilter@42c0a16e, org.springframework.security.web.access.ExceptionTranslationFilter@492521c4, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@1bee0085]
+2021-05-04 11:08:03.647  INFO 12476 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:08:04.351  INFO 12476 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-tweetkafka-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = tweetkafka
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2021-05-04 11:08:04.730  INFO 12476 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-05-04 11:08:04.734  INFO 12476 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-05-04 11:08:04.735  INFO 12476 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1620106684728
+2021-05-04 11:08:04.757  INFO 12476 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Subscribed to topic(s): TweetPosted
+2021-05-04 11:08:04.775  INFO 12476 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-05-04 11:08:04.792  INFO 12476 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-04 11:08:04.915  INFO 12476 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-04 11:08:05.097  INFO 12476 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-04 11:08:06.012  INFO 12476 --- [main] c.t.t.TweetserviceApplicationTests       : Started TweetserviceApplicationTests in 12.215 seconds (JVM running for 15.239)
+2021-05-04 11:08:06.669  INFO 12476 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Unsubscribed all topics or patterns and assigned partitions
+2021-05-04 11:08:06.670  INFO 12476 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.s.c.ThreadPoolTaskScheduler          : Shutting down ExecutorService
+2021-05-04 11:08:06.690  INFO 12476 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] essageListenerContainer$ListenerConsumer : tweetkafka: Consumer stopped
+2021-05-04 11:08:06.694  INFO 12476 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:08:25.318  INFO 8796 --- [main] c.t.t.TweetserviceApplication            : Starting TweetserviceApplication using Java 1.8.0_201 on Lab-637520727382813401-1 with PID 8796 (C:\Tweet-App-2\MidTier\tweetservice\target\classes started by User in C:\Tweet-App-2\MidTier\tweetservice)
+2021-05-04 11:08:25.324  INFO 8796 --- [main] c.t.t.TweetserviceApplication            : No active profile set, falling back to default profiles: default
+2021-05-04 11:08:27.270  INFO 8796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-04 11:08:27.424  INFO 8796 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 2 MongoDB repository interfaces.
+2021-05-04 11:08:28.637  INFO 8796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-05-04 11:08:28.655  INFO 8796 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-04 11:08:28.656  INFO 8796 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-04 11:08:28.829  INFO 8796 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-04 11:08:28.830  INFO 8796 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3391 ms
+2021-05-04 11:08:29.201  INFO 8796 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-04 11:08:29.699  INFO 8796 --- [cluster-rtt-ClusterId{value='6090ddd53ff3823f736a5f34', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:28}] to localhost:27017
+2021-05-04 11:08:29.701  INFO 8796 --- [cluster-ClusterId{value='6090ddd53ff3823f736a5f34', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:27}] to localhost:27017
+2021-05-04 11:08:29.702  INFO 8796 --- [cluster-ClusterId{value='6090ddd53ff3823f736a5f34', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=197735000}
+2021-05-04 11:08:31.013  INFO 8796 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 70c69ee0-a00e-4eee-b976-f755bd0dc350
+
+2021-05-04 11:08:31.219  INFO 8796 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-04 11:08:31.406  INFO 8796 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@707865bd, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b325930, org.springframework.security.web.header.HeaderWriterFilter@383cb5ce, org.springframework.web.filter.CorsFilter@31f77791, org.springframework.security.web.authentication.logout.LogoutFilter@4d0cc83e, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@1a7cb3a4, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@79ba0a6f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6c33da7a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@552fee7a, org.springframework.security.web.session.SessionManagementFilter@5e002356, org.springframework.security.web.access.ExceptionTranslationFilter@230a73f2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4962b41e]
+2021-05-04 11:08:31.610  INFO 8796 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:08:32.102  INFO 8796 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-tweetkafka-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = tweetkafka
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2021-05-04 11:08:32.343  INFO 8796 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 2.6.0
+2021-05-04 11:08:32.347  INFO 8796 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: 62abe01bee039651
+2021-05-04 11:08:32.348  INFO 8796 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1620106712341
+2021-05-04 11:08:32.353  INFO 8796 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Subscribed to topic(s): TweetPosted
+2021-05-04 11:08:32.364  INFO 8796 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService
+2021-05-04 11:08:32.457  INFO 8796 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-05-04 11:08:32.460  INFO 8796 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-04 11:08:32.510  INFO 8796 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-04 11:08:32.631  INFO 8796 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-04 11:08:33.491  INFO 8796 --- [main] c.t.t.TweetserviceApplication            : Started TweetserviceApplication in 9.248 seconds (JVM running for 10.387)
+2021-05-04 11:08:35.624  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:08:35.624  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:08:37.724  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:08:37.725  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:08:39.876  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:08:39.876  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:08:42.088  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:08:42.090  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:08:44.609  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:08:44.610  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:08:47.483  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:08:47.484  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:08:50.301  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:08:50.302  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:08:53.223  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:08:53.223  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:08:56.140  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:08:56.144  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:08:59.342  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:08:59.343  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:09:02.524  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:09:02.525  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:09:05.658  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:09:05.659  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:09:08.549  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Connection to node -1 (localhost/127.0.0.1:9092) could not be established. Broker may not be available.
+2021-05-04 11:09:08.550  WARN 8796 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-tweetkafka-1, groupId=tweetkafka] Bootstrap broker localhost:9092 (id: -1 rack: null) disconnected
+2021-05-04 11:09:49.421  INFO 11460 --- [main] c.t.t.TweetserviceApplication            : Starting TweetserviceApplication using Java 1.8.0_201 on Lab-637520727382813401-1 with PID 11460 (C:\Tweet-App-2\MidTier\tweetservice\target\classes started by User in C:\Tweet-App-2\MidTier\tweetservice)
+2021-05-04 11:09:49.429  INFO 11460 --- [main] c.t.t.TweetserviceApplication            : No active profile set, falling back to default profiles: default
+2021-05-04 11:09:51.503  INFO 11460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-04 11:09:51.657  INFO 11460 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 147 ms. Found 2 MongoDB repository interfaces.
+2021-05-04 11:09:53.042  INFO 11460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-05-04 11:09:53.072  INFO 11460 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-04 11:09:53.073  INFO 11460 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-04 11:09:53.255  INFO 11460 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-04 11:09:53.256  INFO 11460 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3658 ms
+2021-05-04 11:09:53.634  INFO 11460 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-04 11:09:53.895  INFO 11460 --- [cluster-rtt-ClusterId{value='6090de29adcb9940728c2761', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:30}] to localhost:27017
+2021-05-04 11:09:53.924  INFO 11460 --- [cluster-ClusterId{value='6090de29adcb9940728c2761', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:29}] to localhost:27017
+2021-05-04 11:09:53.957  INFO 11460 --- [cluster-ClusterId{value='6090de29adcb9940728c2761', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=59034600}
+2021-05-04 11:09:55.636  INFO 11460 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d07411da-60a9-4593-9971-31b1acdd85d4
+
+2021-05-04 11:09:55.927  INFO 11460 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-04 11:09:56.297  INFO 11460 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c5df615, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e9bbd9d, org.springframework.security.web.header.HeaderWriterFilter@4d4436d0, org.springframework.web.filter.CorsFilter@2f995afc, org.springframework.security.web.authentication.logout.LogoutFilter@7634f2b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@57e5396b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d3e3085, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29d405e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@377949f1, org.springframework.security.web.session.SessionManagementFilter@477021ee, org.springframework.security.web.access.ExceptionTranslationFilter@ab2e6d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@677ce519]
+2021-05-04 11:09:56.488  INFO 11460 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:09:57.038  INFO 11460 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-05-04 11:09:57.040  INFO 11460 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-04 11:09:57.130  INFO 11460 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-04 11:09:57.259  INFO 11460 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-04 11:09:57.850  INFO 11460 --- [main] c.t.t.TweetserviceApplication            : Started TweetserviceApplication in 9.391 seconds (JVM running for 10.464)
+2021-05-04 11:13:01.529  INFO 11460 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-04 11:13:01.540  INFO 11460 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-04 11:13:01.543  INFO 11460 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-05-04 11:13:01.745  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : register User - Inside Controller
+2021-05-04 11:13:01.745  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : user registering - Inside Service
+2021-05-04 11:13:01.745  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : getUserByEmail  - Inside Repository
+2021-05-04 11:13:01.863  INFO 11460 --- [http-nio-8081-exec-1] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:31}] to localhost:27017
+2021-05-04 11:13:01.915  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:13:01.918  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : registerUser  - Inside Repository
+2021-05-04 11:13:02.015  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Successfully registered user - Inside Service
+2021-05-04 11:13:02.016  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User registered successfully - Inside Controller
+2021-05-04 11:13:16.032  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 11:13:16.033  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 11:13:16.033  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:13:16.073  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Invalide password while logging - Inside Service
+2021-05-04 11:13:16.076  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 11:13:28.311  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 11:13:28.312  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 11:13:28.312  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:13:28.317  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Invalide password while logging - Inside Service
+2021-05-04 11:13:28.318  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 11:13:50.334  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Forgot password - Inside Controller
+2021-05-04 11:13:50.335  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:13:50.338  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Forgot password - Inside Service
+2021-05-04 11:13:50.338  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : changePassword  - Inside Repository
+2021-05-04 11:13:50.368  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Password updated successfully  - Inside Service
+2021-05-04 11:13:50.369  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Forgot password successfull - Inside Controller
+2021-05-04 11:14:03.625  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Forgot password - Inside Controller
+2021-05-04 11:14:03.626  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:14:03.631  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Forgot password - Inside Service
+2021-05-04 11:14:03.631  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : changePassword  - Inside Repository
+2021-05-04 11:14:03.634  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Password updated successfully  - Inside Service
+2021-05-04 11:14:03.634  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Forgot password successfull - Inside Controller
+2021-05-04 11:15:32.902  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 11:15:32.903  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 11:15:32.903  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:15:32.911  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Invalide password while logging - Inside Service
+2021-05-04 11:15:32.911  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 11:15:57.490  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 11:15:57.491  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 11:15:57.491  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:15:57.497  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Invalide password while logging - Inside Service
+2021-05-04 11:15:57.498  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 11:17:50.670  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 11:17:50.671  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 11:17:50.673  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:17:50.678  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Invalide password while logging - Inside Service
+2021-05-04 11:17:50.682  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 11:20:32.815  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : register User - Inside Controller
+2021-05-04 11:20:32.815  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : user registering - Inside Service
+2021-05-04 11:20:32.816  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : getUserByEmail  - Inside Repository
+2021-05-04 11:20:32.819  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:20:32.821  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : registerUser  - Inside Repository
+2021-05-04 11:20:32.825  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Successfully registered user - Inside Service
+2021-05-04 11:20:32.826  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : User registered successfully - Inside Controller
+2021-05-04 11:21:31.500  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 11:21:31.501  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 11:21:31.501  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:21:31.507  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : User logged Sccessfully - Inside Service
+2021-05-04 11:21:31.507  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 11:21:31.592  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 11:21:31.593  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 11:21:31.593  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 11:21:31.607  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 11:22:05.211  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Add Tweet - Inside Controller
+2021-05-04 11:22:05.211  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Add tweet - Inside Service
+2021-05-04 11:22:05.211  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Add Tweet  - Inside Post Dao
+2021-05-04 11:22:05.258  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Successfully Added tweet - Inside Service
+2021-05-04 11:22:05.258  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Success in adding tweet - Inside Controller
+2021-05-04 11:22:08.458  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Add Tweet - Inside Controller
+2021-05-04 11:22:08.458  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Add tweet - Inside Service
+2021-05-04 11:22:08.458  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Add Tweet  - Inside Post Dao
+2021-05-04 11:22:08.463  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Successfully Added tweet - Inside Service
+2021-05-04 11:22:08.464  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Success in adding tweet - Inside Controller
+2021-05-04 11:22:10.286  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 11:22:10.287  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 11:22:10.287  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 11:22:10.292  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 11:22:14.142  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Delete Tweet - Inside Controller
+2021-05-04 11:22:14.143  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Deleting tweet - Inside Service
+2021-05-04 11:22:14.143  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Delete tweet  - Inside PostDao
+2021-05-04 11:22:14.157  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Success deleted tweet - Inside Controller
+2021-05-04 11:22:17.343  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:17.344  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:17.345  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:17.351  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:17.352  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:17.355  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:17.504  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:17.505  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:17.508  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:17.511  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:17.513  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:17.513  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:17.813  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:17.814  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:17.814  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:17.817  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:17.819  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:17.819  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:18.030  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:18.030  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:18.030  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:18.033  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:18.035  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:18.036  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:18.307  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:18.307  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:18.307  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:18.310  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:18.314  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:18.314  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:18.440  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:18.441  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:18.441  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:18.444  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:18.446  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:18.446  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:20.096  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:20.096  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:20.096  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:20.100  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:20.106  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:20.106  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:20.282  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:20.282  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:20.282  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:20.286  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:20.290  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:20.291  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:20.552  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:20.553  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:20.553  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:20.557  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:20.559  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:20.559  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:20.667  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:20.667  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:20.668  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:20.670  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:20.674  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:20.674  INFO 11460 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:20.872  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:20.872  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:20.872  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:20.874  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:20.879  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:20.880  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:21.105  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:21.105  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:21.105  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:21.107  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:21.110  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:21.110  INFO 11460 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:21.244  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:21.244  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:21.244  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:21.248  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:21.253  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:21.254  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:21.463  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:21.463  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:21.463  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:21.466  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:21.472  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:21.472  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:22.864  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:22.865  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:22.865  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:22.867  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:22.869  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:22.869  INFO 11460 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:23.161  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:23.161  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:23.161  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:23.166  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:23.168  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:23.168  INFO 11460 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:23.257  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:22:23.257  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:22:23.257  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:22:23.261  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:22:23.263  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:22:23.263  INFO 11460 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:22:33.858  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 11:22:33.859  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 11:22:33.861  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 11:22:33.864  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 11:23:12.959  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Forgot password - Inside Controller
+2021-05-04 11:23:12.960  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:23:12.964  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Forgot password - Inside Service
+2021-05-04 11:23:12.965  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : changePassword  - Inside Repository
+2021-05-04 11:23:12.968  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Password updated successfully  - Inside Service
+2021-05-04 11:23:12.969  INFO 11460 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Forgot password successfull - Inside Controller
+2021-05-04 11:29:21.961  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Forgot password - Inside Controller
+2021-05-04 11:29:21.962  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:29:21.967  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Forgot password - Inside Service
+2021-05-04 11:29:21.967  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : changePassword  - Inside Repository
+2021-05-04 11:29:21.970  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Password updated successfully  - Inside Service
+2021-05-04 11:29:21.971  INFO 11460 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Forgot password successfull - Inside Controller
+2021-05-04 11:29:38.705  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 11:29:38.705  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 11:29:38.706  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:29:38.708  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : User logged Sccessfully - Inside Service
+2021-05-04 11:29:38.708  INFO 11460 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 11:29:38.788  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 11:29:38.789  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 11:29:38.789  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 11:29:38.792  INFO 11460 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 11:31:11.290  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get All tweet by user name - Inside Controller
+2021-05-04 11:31:11.293  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get all tweet by userName - Inside Service
+2021-05-04 11:31:11.293  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get all tweet by user name - Inside Post Dao
+2021-05-04 11:31:11.302  INFO 11460 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Success in getting all tweet by name - Inside Controller
+2021-05-04 11:39:05.607  INFO 11612 --- [main] c.t.t.TweetserviceApplicationTests       : Starting TweetserviceApplicationTests using Java 1.8.0_201 on Lab-637520727382813401-1 with PID 11612 (started by User in C:\Tweet-App-2\MidTier\tweetservice)
+2021-05-04 11:39:05.641  INFO 11612 --- [main] c.t.t.TweetserviceApplicationTests       : No active profile set, falling back to default profiles: default
+2021-05-04 11:39:08.246  INFO 11612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-04 11:39:08.542  INFO 11612 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 285 ms. Found 2 MongoDB repository interfaces.
+2021-05-04 11:39:10.543  INFO 11612 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[mongodb:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-04 11:39:13.647  INFO 11612 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: d046fb69-abc0-4b53-ad8e-b49cd3ff0b49
+
+2021-05-04 11:39:14.318  INFO 11612 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-04 11:39:14.900  INFO 11612 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15d236fd, org.springframework.security.web.context.SecurityContextPersistenceFilter@78e68401, org.springframework.security.web.header.HeaderWriterFilter@21edd891, org.springframework.web.filter.CorsFilter@6b9c42bd, org.springframework.security.web.authentication.logout.LogoutFilter@1a14fdf0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@39c87b42, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b0dbfb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76cdafa3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@584ca390, org.springframework.security.web.session.SessionManagementFilter@4d518c66, org.springframework.security.web.access.ExceptionTranslationFilter@7a04f730, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a31ed12]
+2021-05-04 11:39:15.531  INFO 11612 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:39:16.516  INFO 11612 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-04 11:39:16.640  INFO 11612 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-04 11:39:16.791  INFO 11612 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-04 11:39:17.472  INFO 11612 --- [main] c.t.t.TweetserviceApplicationTests       : Started TweetserviceApplicationTests in 12.82 seconds (JVM running for 15.787)
+2021-05-04 11:39:18.311  INFO 11612 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:49:59.678  INFO 13268 --- [main] c.t.t.TweetserviceApplicationTests       : Starting TweetserviceApplicationTests using Java 1.8.0_201 on Lab-637520727382813401-1 with PID 13268 (started by User in C:\Tweet-App-2\MidTier\tweetservice)
+2021-05-04 11:49:59.694  INFO 13268 --- [main] c.t.t.TweetserviceApplicationTests       : No active profile set, falling back to default profiles: default
+2021-05-04 11:50:02.254  INFO 13268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-04 11:50:02.424  INFO 13268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 161 ms. Found 2 MongoDB repository interfaces.
+2021-05-04 11:50:04.045  INFO 13268 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-04 11:50:04.293  INFO 13268 --- [cluster-rtt-ClusterId{value='6090e794e7b88f7ac2c04b33', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:40}] to localhost:27017
+2021-05-04 11:50:04.451  INFO 13268 --- [cluster-ClusterId{value='6090e794e7b88f7ac2c04b33', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:41}] to localhost:27017
+2021-05-04 11:50:04.467  INFO 13268 --- [cluster-ClusterId{value='6090e794e7b88f7ac2c04b33', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=91273000}
+2021-05-04 11:50:07.189  INFO 13268 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: aa58dc74-b5c8-44af-9b86-4dc7f220d234
+
+2021-05-04 11:50:07.631  INFO 13268 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-04 11:50:08.236  INFO 13268 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15d236fd, org.springframework.security.web.context.SecurityContextPersistenceFilter@78e68401, org.springframework.security.web.header.HeaderWriterFilter@21edd891, org.springframework.web.filter.CorsFilter@6b9c42bd, org.springframework.security.web.authentication.logout.LogoutFilter@1a14fdf0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@39c87b42, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@5b0dbfb, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@76cdafa3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@584ca390, org.springframework.security.web.session.SessionManagementFilter@4d518c66, org.springframework.security.web.access.ExceptionTranslationFilter@7a04f730, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@4a31ed12]
+2021-05-04 11:50:08.907  INFO 13268 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:50:09.759  INFO 13268 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-04 11:50:09.828  INFO 13268 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-04 11:50:09.993  INFO 13268 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-04 11:50:10.652  INFO 13268 --- [main] c.t.t.TweetserviceApplicationTests       : Started TweetserviceApplicationTests in 11.967 seconds (JVM running for 15.024)
+2021-05-04 11:50:11.485  INFO 13268 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:50:37.532  INFO 8536 --- [main] c.t.t.TweetserviceApplication            : Starting TweetserviceApplication using Java 1.8.0_201 on Lab-637520727382813401-1 with PID 8536 (C:\Tweet-App-2\MidTier\tweetservice\target\classes started by User in C:\Tweet-App-2\MidTier\tweetservice)
+2021-05-04 11:50:37.538  INFO 8536 --- [main] c.t.t.TweetserviceApplication            : No active profile set, falling back to default profiles: default
+2021-05-04 11:50:39.854  INFO 8536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-04 11:50:40.072  INFO 8536 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 211 ms. Found 2 MongoDB repository interfaces.
+2021-05-04 11:50:41.776  INFO 8536 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-05-04 11:50:41.811  INFO 8536 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-04 11:50:41.812  INFO 8536 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-04 11:50:41.998  INFO 8536 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-04 11:50:41.998  INFO 8536 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4317 ms
+2021-05-04 11:50:42.573  INFO 8536 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-04 11:50:42.824  INFO 8536 --- [cluster-ClusterId{value='6090e7bab2857d1b69cda139', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:42}] to localhost:27017
+2021-05-04 11:50:42.824  INFO 8536 --- [cluster-ClusterId{value='6090e7bab2857d1b69cda139', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=68596900}
+2021-05-04 11:50:42.956  INFO 8536 --- [cluster-rtt-ClusterId{value='6090e7bab2857d1b69cda139', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:43}] to localhost:27017
+2021-05-04 11:50:45.080  INFO 8536 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: e607bea4-f4ae-48c5-bf83-3f2e6a1dc700
+
+2021-05-04 11:50:45.411  INFO 8536 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-04 11:50:45.678  INFO 8536 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c5df615, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e9bbd9d, org.springframework.security.web.header.HeaderWriterFilter@4d4436d0, org.springframework.web.filter.CorsFilter@2f995afc, org.springframework.security.web.authentication.logout.LogoutFilter@7634f2b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@57e5396b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d3e3085, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29d405e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@377949f1, org.springframework.security.web.session.SessionManagementFilter@477021ee, org.springframework.security.web.access.ExceptionTranslationFilter@ab2e6d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@677ce519]
+2021-05-04 11:50:45.879  INFO 8536 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:50:46.491  WARN 8536 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8081 is already in use
+2021-05-04 11:50:46.493  INFO 8536 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:50:46.508  INFO 8536 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-05-04 11:50:46.546  INFO 8536 --- [main] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-05-04 11:50:46.613 ERROR 8536 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8081 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8081 or configure this application to listen on another port.
+
+2021-05-04 11:52:03.947  INFO 11996 --- [main] c.t.t.TweetserviceApplication            : Starting TweetserviceApplication using Java 1.8.0_201 on Lab-637520727382813401-1 with PID 11996 (C:\Tweet-App-2\MidTier\tweetservice\target\classes started by User in C:\Tweet-App-2\MidTier\tweetservice)
+2021-05-04 11:52:03.953  INFO 11996 --- [main] c.t.t.TweetserviceApplication            : No active profile set, falling back to default profiles: default
+2021-05-04 11:52:06.387  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2021-05-04 11:52:06.550  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 156 ms. Found 2 MongoDB repository interfaces.
+2021-05-04 11:52:07.933  INFO 11996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2021-05-04 11:52:07.950  INFO 11996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-05-04 11:52:07.950  INFO 11996 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-05-04 11:52:08.184  INFO 11996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-05-04 11:52:08.185  INFO 11996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4030 ms
+2021-05-04 11:52:08.600  INFO 11996 --- [main] org.mongodb.driver.cluster               : Cluster created with settings {hosts=[localhost:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2021-05-04 11:52:08.925  INFO 11996 --- [cluster-ClusterId{value='6090e8108eb80f697ab16fe9', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:1, serverValue:44}] to localhost:27017
+2021-05-04 11:52:08.926  INFO 11996 --- [cluster-ClusterId{value='6090e8108eb80f697ab16fe9', description='null'}-localhost:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=168743600}
+2021-05-04 11:52:08.969  INFO 11996 --- [cluster-rtt-ClusterId{value='6090e8108eb80f697ab16fe9', description='null'}-localhost:27017] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:2, serverValue:45}] to localhost:27017
+2021-05-04 11:52:10.906  INFO 11996 --- [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: f8d70b2b-2074-4574-be05-ffa22ca4a5ad
+
+2021-05-04 11:52:11.187  INFO 11996 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-05-04 11:52:11.463  INFO 11996 --- [main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c5df615, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e9bbd9d, org.springframework.security.web.header.HeaderWriterFilter@4d4436d0, org.springframework.web.filter.CorsFilter@2f995afc, org.springframework.security.web.authentication.logout.LogoutFilter@7634f2b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@57e5396b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@d3e3085, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@29d405e6, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@377949f1, org.springframework.security.web.session.SessionManagementFilter@477021ee, org.springframework.security.web.access.ExceptionTranslationFilter@ab2e6d2, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@677ce519]
+2021-05-04 11:52:11.649  INFO 11996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-05-04 11:52:12.110  INFO 11996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2021-05-04 11:52:12.119  INFO 11996 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-05-04 11:52:12.231  INFO 11996 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-05-04 11:52:12.340  INFO 11996 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-05-04 11:52:12.871  INFO 11996 --- [main] c.t.t.TweetserviceApplication            : Started TweetserviceApplication in 9.985 seconds (JVM running for 11.149)
+2021-05-04 11:52:42.060  INFO 11996 --- [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-05-04 11:52:42.061  INFO 11996 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-05-04 11:52:42.069  INFO 11996 --- [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-05-04 11:52:42.426  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Forgot password - Inside Controller
+2021-05-04 11:52:42.426  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:52:42.568  INFO 11996 --- [http-nio-8081-exec-2] org.mongodb.driver.connection            : Opened connection [connectionId{localValue:3, serverValue:46}] to localhost:27017
+2021-05-04 11:52:42.740  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Forgot password - Inside Service
+2021-05-04 11:52:42.742  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : changePassword  - Inside Repository
+2021-05-04 11:52:42.874  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Password updated successfully  - Inside Service
+2021-05-04 11:52:42.874  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Forgot password successfull - Inside Controller
+2021-05-04 11:52:54.365  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 11:52:54.365  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 11:52:54.365  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 11:52:54.371  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : User logged Sccessfully - Inside Service
+2021-05-04 11:52:54.372  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 11:52:54.429  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 11:52:54.430  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 11:52:54.430  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 11:52:54.445  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 11:53:00.670  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:53:00.670  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:53:00.670  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:53:00.677  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:53:00.711  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:53:00.712  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:53:00.770  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:53:00.771  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:53:00.771  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:53:00.774  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:53:00.781  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:53:00.781  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:53:01.642  INFO 11996 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:53:01.644  INFO 11996 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:53:01.646  INFO 11996 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:53:01.649  INFO 11996 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:53:01.652  INFO 11996 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:53:01.652  INFO 11996 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:53:02.055  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:53:02.055  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:53:02.055  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:53:02.059  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:53:02.066  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:53:02.066  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:53:04.310  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Like a tweet - Inside Controller
+2021-05-04 11:53:04.311  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Like a tweet - Inside Service
+2021-05-04 11:53:04.311  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:53:04.314  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Update Like  - Inside PostDao
+2021-05-04 11:53:04.316  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Success while Like a tweet - Inside Service
+2021-05-04 11:53:04.317  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : Success liked a tweet - Inside Controller
+2021-05-04 11:53:20.214  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Update Tweet - Inside Controller
+2021-05-04 11:53:20.215  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Update tweet - Inside Service
+2021-05-04 11:53:20.215  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Find by id  - Inside Post Dao
+2021-05-04 11:53:20.219  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : update Tweet  - Inside Post Dao
+2021-05-04 11:53:20.221  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Success while updating tweet - Inside Service
+2021-05-04 11:53:20.222  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Success updated tweet - Inside Controller
+2021-05-04 11:53:25.272  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 11:53:25.273  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 11:53:25.273  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 11:53:25.277  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 12:07:43.720  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 12:07:43.720  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 12:07:43.721  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 12:07:43.725  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : User logged Sccessfully - Inside Service
+2021-05-04 12:07:43.726  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 12:07:43.786  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 12:07:43.786  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 12:07:43.787  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 12:07:43.791  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 12:07:50.825  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 12:07:50.826  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 12:07:50.826  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 12:07:50.829  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 12:09:03.752  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : register User - Inside Controller
+2021-05-04 12:09:03.753  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : user registering - Inside Service
+2021-05-04 12:09:03.755  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : getUserByEmail  - Inside Repository
+2021-05-04 12:09:03.761  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 12:09:03.768  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : registerUser  - Inside Repository
+2021-05-04 12:09:03.924  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Successfully registered user - Inside Service
+2021-05-04 12:09:03.925  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : User registered successfully - Inside Controller
+2021-05-04 12:09:37.820  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 12:09:37.821  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 12:09:37.821  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 12:09:37.826  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User logged Sccessfully - Inside Service
+2021-05-04 12:09:37.826  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 12:09:37.898  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 12:09:37.898  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 12:09:37.899  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 12:09:37.900  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 12:10:02.200  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Add Tweet - Inside Controller
+2021-05-04 12:10:02.201  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Add tweet - Inside Service
+2021-05-04 12:10:02.201  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Add Tweet  - Inside Post Dao
+2021-05-04 12:10:02.230  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Successfully Added tweet - Inside Service
+2021-05-04 12:10:02.230  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Success in adding tweet - Inside Controller
+2021-05-04 12:10:07.286  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 12:10:07.287  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 12:10:07.287  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 12:10:07.289  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 12:11:51.459  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Get All tweet by user name - Inside Controller
+2021-05-04 12:11:51.459  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Get all tweet by userName - Inside Service
+2021-05-04 12:11:51.459  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Get all tweet by user name - Inside Post Dao
+2021-05-04 12:11:51.472  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Success in getting all tweet by name - Inside Controller
+2021-05-04 12:11:59.781  INFO 11996 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Get All tweet by user name - Inside Controller
+2021-05-04 12:11:59.782  INFO 11996 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Get all tweet by userName - Inside Service
+2021-05-04 12:11:59.782  INFO 11996 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Get all tweet by user name - Inside Post Dao
+2021-05-04 12:11:59.795  INFO 11996 --- [http-nio-8081-exec-8] c.t.t.TweetserviceApplication            : Success in getting all tweet by name - Inside Controller
+2021-05-04 12:18:34.175  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : register User - Inside Controller
+2021-05-04 12:18:34.176  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : user registering - Inside Service
+2021-05-04 12:18:34.176  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : getUserByEmail  - Inside Repository
+2021-05-04 12:18:34.183  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 12:18:34.188  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : registerUser  - Inside Repository
+2021-05-04 12:18:34.192  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : Successfully registered user - Inside Service
+2021-05-04 12:18:34.192  INFO 11996 --- [http-nio-8081-exec-9] c.t.t.TweetserviceApplication            : User registered successfully - Inside Controller
+2021-05-04 12:18:41.404  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 12:18:41.405  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 12:18:41.405  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 12:18:41.408  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User logged Sccessfully - Inside Service
+2021-05-04 12:18:41.409  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 12:18:41.458  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 12:18:41.458  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 12:18:41.458  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 12:18:41.462  INFO 11996 --- [http-nio-8081-exec-2] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 12:18:47.148  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get All tweet by user name - Inside Controller
+2021-05-04 12:18:47.149  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get all tweet by userName - Inside Service
+2021-05-04 12:18:47.149  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Get all tweet by user name - Inside Post Dao
+2021-05-04 12:18:47.153  INFO 11996 --- [http-nio-8081-exec-3] c.t.t.TweetserviceApplication            : Success in getting all tweet by name - Inside Controller
+2021-05-04 12:19:00.882  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Add Tweet - Inside Controller
+2021-05-04 12:19:00.883  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Add tweet - Inside Service
+2021-05-04 12:19:00.883  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Add Tweet  - Inside Post Dao
+2021-05-04 12:19:00.886  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Successfully Added tweet - Inside Service
+2021-05-04 12:19:00.887  INFO 11996 --- [http-nio-8081-exec-4] c.t.t.TweetserviceApplication            : Success in adding tweet - Inside Controller
+2021-05-04 12:19:05.915  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 12:19:05.916  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 12:19:05.916  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 12:19:05.919  INFO 11996 --- [http-nio-8081-exec-5] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 12:19:09.355  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Get All tweet by user name - Inside Controller
+2021-05-04 12:19:09.356  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Get all tweet by userName - Inside Service
+2021-05-04 12:19:09.356  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Get all tweet by user name - Inside Post Dao
+2021-05-04 12:19:09.363  INFO 11996 --- [http-nio-8081-exec-6] c.t.t.TweetserviceApplication            : Success in getting all tweet by name - Inside Controller
+2021-05-04 12:19:12.315  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 12:19:12.315  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 12:19:12.316  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 12:19:12.318  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
+2021-05-04 12:55:37.572  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : register User - Inside Controller
+2021-05-04 12:55:37.573  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : user registering - Inside Service
+2021-05-04 12:55:37.576  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : getUserByEmail  - Inside Repository
+2021-05-04 12:55:37.580  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 12:55:37.583  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : registerUser  - Inside Repository
+2021-05-04 12:55:37.586  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : Successfully registered user - Inside Service
+2021-05-04 12:55:37.587  INFO 11996 --- [http-nio-8081-exec-7] c.t.t.TweetserviceApplication            : User registered successfully - Inside Controller
+2021-05-04 12:57:11.001  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : User Login - Inside Controller
+2021-05-04 12:57:11.002  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : User login - Inside Service
+2021-05-04 12:57:11.002  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : getUserByUsername  - Inside Repository
+2021-05-04 12:57:11.011  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : User logged Sccessfully - Inside Service
+2021-05-04 12:57:11.011  INFO 11996 --- [http-nio-8081-exec-10] c.t.t.TweetserviceApplication            : User logger inSuccessfully - Inside Controller
+2021-05-04 12:57:11.063  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Get All Tweet - Inside Controller
+2021-05-04 12:57:11.063  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Get all tweet - Inside Service
+2021-05-04 12:57:11.063  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Get all tweet  - Inside Post Dao
+2021-05-04 12:57:11.068  INFO 11996 --- [http-nio-8081-exec-1] c.t.t.TweetserviceApplication            : Success in getting all tweet - Inside Controller
