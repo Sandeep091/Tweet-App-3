@@ -1,25 +1,33 @@
 package com.tweetapp.tweetservice.bean;
 
-import java.util.Date;
-import java.util.List;
+
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBAttribute;
+import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBDocument;
 
 /**
  * @author Sandeep
  *
  */
+@DynamoDBDocument
 public class Reply {
 
+	@DynamoDBAttribute
 	private String userName;
-	private List<String> tags;
+	@DynamoDBAttribute
+	private String tags;
+	@DynamoDBAttribute
 	private String message;
-	private Date createdAt;
 
-	public Reply(String userName, List<String> tags, String message, Date createdAt) {
+	public Reply(String userName, String tags, String message) {
 		super();
 		this.userName = userName;
 		this.tags = tags;
 		this.message = message;
-		this.createdAt = createdAt;
+	}
+
+	public Reply() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 
 	public String getUserName() {
@@ -30,11 +38,11 @@ public class Reply {
 		this.userName = userName;
 	}
 
-	public List<String> getTags() {
+	public String getTags() {
 		return tags;
 	}
 
-	public void setTags(List<String> tags) {
+	public void setTags(String tags) {
 		this.tags = tags;
 	}
 
@@ -46,12 +54,10 @@ public class Reply {
 		this.message = message;
 	}
 
-	public Date getCreatedAt() {
-		return createdAt;
-	}
 
-	public void setCreatedAt() {
-		this.createdAt = new Date();
+	@Override
+	public String toString() {
+		return "Reply [userName=" + userName + ", tags=" + tags + ", message=" + message+ "]";
 	}
 
 }

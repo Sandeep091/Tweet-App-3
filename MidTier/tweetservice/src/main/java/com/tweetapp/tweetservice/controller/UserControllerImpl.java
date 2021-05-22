@@ -20,7 +20,7 @@ import com.tweetapp.tweetservice.util.LoggerConst;
 import io.swagger.annotations.Api;
 
 /**
- * @author Sadeep
+ * @author Sandeep
  *
  */
 @Api(value = "UserServiceImpl")

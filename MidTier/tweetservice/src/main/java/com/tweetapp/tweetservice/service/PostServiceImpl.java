@@ -40,7 +40,6 @@ public class PostServiceImpl implements PostService {
 	public PostResponse addTweet(String userName, Post post) throws UserException {
 		LoggerConst.LOG.info("Add tweet - Inside Service");
 		PostResponse res = new PostResponse();
-		post.setCreatedAt();
 		post.setUserName(userName);
 		post.setLikes(0);
 		if(null ==  postDao.addTweet(post)) {
@@ -104,7 +103,6 @@ public class PostServiceImpl implements PostService {
 		if (toSave.getReply() != null) {
 			replyToSave = toSave.getReply();
 		}
-		reply.setCreatedAt();
 		reply.setUserName(userName);
 		replyToSave.add(reply);
 		toSave.setReply(replyToSave);

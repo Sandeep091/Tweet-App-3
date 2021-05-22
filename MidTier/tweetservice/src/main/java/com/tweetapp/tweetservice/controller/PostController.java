@@ -9,7 +9,7 @@ import com.tweetapp.tweetservice.bean.Reply;
 import com.tweetapp.tweetservice.entity.Post;
 
 /**
- * @author Sandee
+ * @author Sandeep
  *
  */
 public interface PostController {

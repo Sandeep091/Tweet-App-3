@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Tweet-App-2\FrontTier\angular-app\src\main.ts */"zUnb");
+module.exports = __webpack_require__(/*! C:\Tweet-App-3\Tweet-App-3\FrontTier\angular-app\src\main.ts */"zUnb");
 
 
 /***/ }),
@@ -472,12 +472,16 @@ class LoginComponent {
             this.userService.userLogin(this.loginForm.value).subscribe({
                 next: (data) => {
                     if (data.status) {
+                        console.log(data);
+                        console.log(data.status);
                         this.auth.isLoggedIn = true;
                         this.auth.setUser(this.loginForm.value.userName);
                         this.router.navigateByUrl('/home');
                     }
                     else {
                         this.auth.isLoggedIn = false;
+                        console.log("Failed");
+                        console.log("");
                     }
                 }
             });
@@ -976,10 +980,12 @@ class ForgotPasswordComponent {
         return this.forgotPasswordForm.get(name);
     }
     onUserNameEntered() {
-        console.log("In Forgot Password");
+        console.log("In submit");
+        console.log(this.forgotPasswordForm.value.userName);
         this.userNameEntered = true;
     }
     onPasswordChange() {
+        console.log(this.forgotPasswordForm.value);
         this.userService.forgotPassword(this.forgotPasswordForm.value.userName, this.forgotPasswordForm.value).subscribe({
             next: (data) => {
                 if (data.status) {
