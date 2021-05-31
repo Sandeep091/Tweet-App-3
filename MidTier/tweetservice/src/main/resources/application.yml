@@ -2,13 +2,8 @@ spring:
   application:
     name: tweetservice
     
-amazon:
-  access:
-    key: ''
-    secret-key: ''
-  region: ''
-  end-point:
-    url: dynamodb.us-east-2.amazonaws.com
+
+
 
 server:
   port: 8081
